@@ -14,8 +14,23 @@ function getAffirmation() {
 		});
 }
 
-function getGif() {
-	return fetch();
+function getGIF() {
+	const searchUrl = new URL("https://api.giphy.com/v1/gifs/search");
+	searchUrl.search = new URLSearchParams({
+		api_key: process.env.API_KEY,
+		q: "hug",
+		rating: "g",
+	});
+	return fetch(searchUrl)
+		.then((res) => {
+			return res.json();
+		})
+		.then((jsonRes) => {
+			const randomInt = Math.floor(
+				Math.random() * jsonRes.data.length
+			);
+			return jsonRes.data[randomInt].url;
+		});
 }
 
 client.on("ready", () => {
@@ -26,7 +41,9 @@ client.on("interactionCreate", async (interaction) => {
 	if (!interaction.isCommand()) return;
 
 	if (interaction.commandName === "bearhug") {
-		await interaction.reply("bring it in for a big bear hug!");
+		await getGIF().then((gif) => {
+			interaction.reply(gif);
+		});
 	} else if (interaction.commandName === "bearnice") {
 		await getAffirmation().then((quote) => {
 			interaction.reply(quote);
