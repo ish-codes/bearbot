@@ -25,3 +25,8 @@ Slash commands can also be registered as seen below by running index.js -- this 
 
 ![image](https://user-images.githubusercontent.com/72824116/164520467-cf8c2d4c-76af-4bef-8de3-9443867be475.png)
 
+### 🐻🐾 next steps?
+
+- Figuring out how to host this on my own home lab - I will probably look into hosting a node image in a Docker/LXC container. This will be a whole new adventure. 👀
+- Figuring out how to use multiple guild IDs for multiple servers.
+- What more features to add? Not sure yet.
