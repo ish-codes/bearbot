@@ -27,7 +27,7 @@ Slash commands can also be registered as seen below by running index.js -- this 
 
 ### 🐻🐾 how is this hosted?
 
-Most mass hosting services like Heroku would likely charge you for 24/7 hosting with extensive usage -- so I decided to do the next best thing, i.e. I set up an Ubuntu server VM with a NodeJS environment in it using my home lab. 
+Most mass hosting services like Heroku would likely charge you for 24/7 hosting with extensive usage -- so I decided to do the next best thing, i.e. I set up an Ubuntu server VM with a NodeJS environment in it using my home lab. Currently, this bot is only present in one server -- but can be set up for use in other servers as well. 
 
 ### 🐻🐾 next steps?
 
